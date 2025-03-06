@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz AI với Gemini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex flex-col items-center p-4">
+    <header class="text-3xl font-bold mb-4">
+      Quiz Trắc Nghiệm từ Gemini AI
+    </header>
+
+    <main id="app" class="w-full max-w-3xl bg-white shadow p-6 rounded-lg">
+      <section id="chat-section" class="mb-6">
+        <input
+          id="topic-input"
+          type="text"
+          placeholder="Nhập chủ đề hoặc môn học..."
+          class="w-full p-2 border rounded mb-2"
+          minlength="2"
+          required
+        />
+        <button
+          id="generate-quiz"
+          class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition-colors"
+        >
+          Tạo Quiz
+        </button>
+        <p id="error-message" class="text-red-500 mt-2 hidden"></p>
+      </section>
+
+      <section id="quiz-section" class="hidden">
+        <form id="quiz-form"></form>
+        <button
+          id="submit-quiz"
+          class="mt-4 bg-green-500 text-white py-2 px-4 rounded"
+        >
+          Nộp bài
+        </button>
+      </section>
+
+      <section
+        id="result-section"
+        class="hidden mt-6 text-xl font-semibold"
+      ></section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
